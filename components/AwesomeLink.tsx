@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export const AwesomeLink = ({
   imageUrl,
@@ -9,9 +9,9 @@ export const AwesomeLink = ({
   id,
 }) => {
   return (
-    <div key={id} className="shadow  max-w-md  rounded">
-      <img src={imageUrl} />
-      <div className="p-5 flex flex-col space-y-2">
+    <div key={id} className="max-w-md  rounded  shadow">
+      <img alt={title} src={imageUrl} layout="fill" />
+      <div className="flex flex-col space-y-2 p-5">
         <p className="text-sm text-blue-500">{category}</p>
         <p className="text-lg font-medium">{title}</p>
         <p className="text-gray-600">{description}</p>
@@ -19,7 +19,7 @@ export const AwesomeLink = ({
           {/* removes https from url */}
           {url.replace(/(^\w+:|^)\/\//, '')}
           <svg
-            className="w-6 h-6"
+            className="h-6 w-6"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -30,5 +30,5 @@ export const AwesomeLink = ({
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
