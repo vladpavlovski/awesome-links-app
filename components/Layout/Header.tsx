@@ -1,5 +1,5 @@
+import Image from 'next/image'
 import Link from 'next/link'
-// components/Layout/Header.tsx
 import React from 'react'
 import { useUser } from '@auth0/nextjs-auth0'
 
@@ -41,11 +41,14 @@ const Header = () => {
                   Logout
                 </a>
               </Link>
-              <img
-                alt="profile"
-                className="h-12 w-12 rounded-full"
-                src={user.picture}
-              />
+              <div className="relative block h-12 w-12">
+                <Image
+                  alt="profile"
+                  className="rounded-full"
+                  src={user.picture}
+                  layout="fill"
+                />
+              </div>
             </div>
           ) : (
             <Link href="/api/auth/login">

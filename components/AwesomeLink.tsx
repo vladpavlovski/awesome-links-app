@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 export const AwesomeLink = ({
@@ -9,8 +10,10 @@ export const AwesomeLink = ({
   id,
 }) => {
   return (
-    <div key={id} className="max-w-md  rounded  shadow">
-      <img alt={title} src={imageUrl} layout="fill" />
+    <div key={id} className="block max-w-md  rounded  shadow">
+      <div className="relative h-44 w-full">
+        <Image alt={title} src={imageUrl} layout="fill" />
+      </div>
       <div className="flex flex-col space-y-2 p-5">
         <p className="text-sm text-blue-500">{category}</p>
         <p className="text-lg font-medium">{title}</p>
