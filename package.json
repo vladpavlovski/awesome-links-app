@@ -9,8 +9,8 @@
     "studio": "npx prisma studio",
     "format": "prettier --write .",
     "lint": "next lint",
-    "vercel-build": "prisma:generate && next build",
-    "prisma:generate": "prisma generate"
+    "vercel-build": "yarn prisma:generate && next build",
+    "prisma:generate": "yarn prisma generate"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
